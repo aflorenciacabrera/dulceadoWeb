@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Productos</a>
+                    <a href="{{ url('/producto') }}">Productos</a>
                     <a href="#">Contactos</a>
                     <a href="#">Información</a>
                     <a href="#">Blog</a>

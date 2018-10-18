@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ProductoController extends Controller
 {
     //
-//   public function almacenamiento(){
-//       return view('almacenamiento.almacenamiento');
-//     }
+  public function galeriaProducto(){
+      return view('producto.galeriaProducto');
+    }
 }
