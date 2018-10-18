@@ -3,6 +3,7 @@
 namespace dulceado\Http\Controllers\Auth;
 
 use dulceado\User;
+use dulceado\Role;
 use dulceado\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

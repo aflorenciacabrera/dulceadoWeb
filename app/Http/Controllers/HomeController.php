@@ -40,4 +40,7 @@ class HomeController extends Controller
         return view(‘some.view’);
     }
     */
+    public function menu(){
+        return view('menu');
+    }
 }
