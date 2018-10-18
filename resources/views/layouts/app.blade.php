@@ -18,10 +18,29 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+       <style>
+        .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+        color: #ffffff;
+        }
+        nav{
+             background-color: #ffffff;
+        }
+        footer {
+            background-color: #D7DBDD;
+        }
+        
+        #justpushtobottom {
+         height: 50vh;
+        }
+
+        
+    </style>
+
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
             <div class="container">
                 <a class="navbar-brand " href="{{ url('/') }}"><img src="{{asset('img/images.png')}}" width="60" />
                    <font face="  " size="5"> {{ config('app.name', 'Laravel') }}</font>
@@ -80,5 +99,26 @@
             @yield('content')
         </main>
     </div>
+  
+   
+    <div id="justpushtobottom"> 
+        
+</div>
+{{-- style="background: #2C3E50;" --}}
+<footer class="footer p-t-1" >
+        <div class="container">
+            
+
+            <div class="copyright company-name text-center"> Florencia Cabrera © 2018</div>
+                         
+          
+        </div>
+    </footer>
+
+
+    
+</body>
+
+   
 </body>
 </html>

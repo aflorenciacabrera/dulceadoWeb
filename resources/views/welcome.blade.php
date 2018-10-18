@@ -12,6 +12,7 @@
 
         <!-- Styles -->
         <style>
+           
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -87,6 +88,7 @@
                     <a href="#">Productos</a>
                     <a href="#">Contactos</a>
                     <a href="#">Información</a>
+                    <a href="#">Blog</a>
                     {{-- <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
