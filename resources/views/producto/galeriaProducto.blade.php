@@ -28,17 +28,28 @@
 	<div class="row">
 		<div class="row">
             {{-- Galeria de Imagen --}}
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb"> 
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{asset('img/Flia Gallina.jpg')}}"
-                   data-target="#image-gallery">
+                   data-target="#image-gallery" >
                     <img class="img-thumbnail " 
                          src="{{asset('img/Flia Gallina.jpg')}}"
                          alt="Another alt text">
                 </a>
+                <h4>Titulo de Producto</h4>
+      			<p>descripcion breve. </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">$29,90</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > Ver</button>
+      				</div>    				
+                  </div>
+                  <br >
             </div> 
-            
-
+ 
         {{-- Modal de las imagenes --}}
             <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -60,7 +71,10 @@
                         </div>
                     </div>
                 </div>
-            </div>  {{--Fin de Modal --}}
+            </div>  {{--Fin de Modal imagen--}}
+            {{-- Modal detalles de producto --}}
+
+            {{-- Fin de Modal detalles de producto --}}
 	    </div>
     </div>
 </div>

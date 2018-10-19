@@ -3,6 +3,7 @@
 namespace dulceado\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -30,7 +31,12 @@ class HomeController extends Controller
     
     public function index(Request $request)
     {
-        $request->user()->authorizeRoles(['user', 'admin']);
+        // Autentifica si el usuario registrado tiene asignado un rol
+        $request->user()->authorizeRoles(['admin', 'user']);
+        // Panel de menu botones de Administracion
+        if(Auth::user()->hasRole('admin')){
+          return view('admin.menu');
+       }
         return view('home');
     }
 /*
@@ -40,7 +46,12 @@ class HomeController extends Controller
         return view(‘some.view’);
     }
     */
+
+    
     public function menu(){
-        return view('menu');
+        if(Auth::user()->hasRole('admin')){
+          return view('admin.menu');
+       }
+        
     }
 }
