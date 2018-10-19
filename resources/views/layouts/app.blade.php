@@ -61,7 +61,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-<li class="nav-item"> <a class="nav-link"> <h5> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h5> </a></li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
