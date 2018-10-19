@@ -17,8 +17,8 @@
 }
 
 .thumb{
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top:30px;
+  margin-bottom: 30px;
 }
 </style>
 
@@ -30,13 +30,15 @@
             {{-- Galeria de Imagen --}}
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                   data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-image="{{asset('img/Flia Gallina.jpg')}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail"
-                         src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    <img class="img-thumbnail " 
+                         src="{{asset('img/Flia Gallina.jpg')}}"
                          alt="Another alt text">
                 </a>
-            </div>  
+            </div> 
+            
+
         {{-- Modal de las imagenes --}}
             <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
