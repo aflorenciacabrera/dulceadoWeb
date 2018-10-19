@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -20,11 +21,8 @@
         </div>
 
         <div align="center">
-            <a  type="button" href="{{url('producto/agregar')}}" class="btn btn-default btn-sl " >Ingreso de Producto <i class="glyphicon glyphicon-plus-sign"></i></a>
-             <a type="button" class="btn btn-default btn-sl">
-          <i class="glyphicon glyphicon-plus-sign"></i> Plus
-             </a>
-        	<i class="glyphicon glyphicon-plus-sign"></i>
+            <a  type="button" href="{{url('producto/agregar')}}" class="btn btn-default btn-sl " > <i class="glyphicon glyphicon-plus"></i> Nuevo</a>
+             
         	
           </div>
     <div class="row">

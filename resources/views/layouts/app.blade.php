@@ -15,10 +15,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
        <style>
         .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
         color: #ffffff;
@@ -58,7 +61,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+<li class="nav-item"> <a class="nav-link"> <h5> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h5> </a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -74,11 +77,13 @@
                                 @endif
                             </li>
                         @else
-                            <li class="nav-item dropdown">
+                      
+                         
+                            {{-- <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                 {{-- Salir --}}
+                                 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -90,9 +95,28 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                            </li> --}}
+                            </ul>
+                            {{-- menu derecha --}}
+                            <ul class="navbar-nav ml-auto navbar-right ">
+                                <div class="row" > 
+                                    
+                                <div class=" col-lg-12 text-center">
+                                    <div class="btn-group">
+                                        <span class="pull-right"> 
+                                            <p> <h5> <i class="glyphicon glyphicon-tags"></i>  {{ Auth::user()->rol }}:   {{ Auth::user()->name }}</h5> </p>
+                                        {{-- <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
+                                        <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a> --}}
+                                        <a  class="btn btn-sm btn-default" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }} <i class="glyphicon glyphicon-off"></i></a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </span> 
+                                    </div>
+                                </div>
+                                </div>
+                            </ul>
                         @endguest
-                    </ul>
                 </div>
             </div>
         </nav>

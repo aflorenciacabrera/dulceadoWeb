@@ -14,4 +14,7 @@ class ProductoController extends Controller
      public function producto(){
       return view('producto.producto');
     }
+    public function agregarProducto(){
+      return view('producto.agregarProducto');
+    }
 }
