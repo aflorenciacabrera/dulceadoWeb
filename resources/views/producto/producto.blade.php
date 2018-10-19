@@ -26,10 +26,10 @@
                                     <div class="table-container">
                                         <table id="mytable" class="table table-bordred table-striped">
                                             <thead>
-                                                <th>Título</th>
-                                                <th>Paciente</th>
-                                                <th>Depositante</th>               
-                                                <th>Cesión</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>               
+                                                <th></th>
                                             </thead>
                                             <tbody>             
                                                 <tr>

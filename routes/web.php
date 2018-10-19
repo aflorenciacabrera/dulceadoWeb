@@ -21,4 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/producto/galeria','ProductoController@galeriaProducto');
 Route::get('/producto','ProductoController@producto');
 Route::get('producto/agregar','ProductoController@agregarProducto');
+Route::post('producto/alta','ProductoController@altaProducto');
 // Route::get('/menu','HomeController@menu');
