@@ -82,7 +82,9 @@
                                                         <a class="btn btn-outline-info btn-sm pull-right">  {{ Auth::user()->rol }}   {{ Auth::user()->name }} </a>
                                                         {{-- <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
                                                         <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a> --}}
-                                                        <a  class="btn btn-outline-info btn-sm pull-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  <i class="fa fa-power-off" aria-hidden="true"></i></a>
+                                                        <a  class="btn btn-outline-info btn-sm pull-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  
+                                                        
+                                                        </a>
                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                             @csrf
                                                         </form>
