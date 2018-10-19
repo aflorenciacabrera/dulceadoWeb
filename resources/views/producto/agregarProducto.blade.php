@@ -67,22 +67,23 @@
                               <label class="control-label" for="name-input-field" >Chocolate </label>
                           </div>        
                             <div class="col-sm-4 input-column">
-                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Negro" checked>Negro</label></li>
-                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Blanco">Blanco</label></li>
+                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Negro" checked >Negro</label></li>
+                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Blanco" >Blanco</label></li>
                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Mixto">Mixto</label></li>                                      
                             </div>
                         </div>
                        {{-- -------------------------------------------------------------- --}}
                         <div class="form-group row">
-                           <label for="name" class="col-md-2 col-form-label "> Descripción</label>
+                           <label for="comment" class="col-md-2 col-form-label "> Descripción</label>
                             <div class="col-md-5">
-                                <input id="name" type="text" class="form-control" name="descripcion" value="" required autofocus>
+                                <textarea class="form-control" rows="2"  name="descripcion" id="comment" required></textarea>
+                                {{-- <input id="name" type="text" class="form-control" name="descripcion" value="" required autofocus> --}}
                             </div>
                          <div class="col-sm-1 label-column">  
                               <label class="control-label">Precio</label> 
                           </div>
                          <div class="col-sm-2 input-column">
-                             <input class="form-control"  type="number"  name="precio" min="0.00" max="10000.00" step="0.01" placeholder="$" />
+                             <input class="form-control"  type="number"  name="precio" min="0.00" max="10000.00" step="0.01" placeholder="$" required />
                           </div>     
                         </div>
                         {{-- -------------------------------------------------------------- --}}
