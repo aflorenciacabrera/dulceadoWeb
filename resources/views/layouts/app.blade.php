@@ -40,8 +40,10 @@
 </head>
 <body>
     <div id="app">
+        {{-- Navegador  --}}
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
             <div class="container">
+                {{-- Logo --}}
                 <a class="navbar-brand " href="{{ url('/') }}"><img src="{{asset('img/images.png')}}" width="60" />
                    <font face="  " size="5"> {{ config('app.name', 'Laravel') }}</font>
                    <span> : </span> <font face="Britannic Bold" size="3"> <span></span></font>
@@ -64,11 +66,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Acceder') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                 @endif
                             </li>
                         @else
@@ -76,12 +78,12 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
+                                 {{-- Salir --}}
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Salir') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -101,10 +103,11 @@
     </div>
   
    
-    <div id="justpushtobottom"> 
-        
-</div>
+    <div id="justpushtobottom">     
+    </div>
 {{-- style="background: #2C3E50;" --}}
+
+{{-- footer --}}
 <footer class="footer p-t-1" >
         <div class="container">
             
@@ -116,9 +119,5 @@
     </footer>
 
 
-    
-</body>
-
-   
 </body>
 </html>

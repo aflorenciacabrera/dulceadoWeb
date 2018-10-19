@@ -3,8 +3,8 @@
 
 <div class="container">
         <div class="row justify-content-center">
+              {{-- Panel de botones --}}
                 <div class="links">
-   {{-- Panel de botones Menu--}}
                     {{-- Pedidos --}}
                     <a class="btn btn-info  btn-lg" role="button" href="{{ url('pedidos') }}">
                         <img src="{{asset('img/realiza_pedido.png')}}" width="100" /><br>
@@ -25,8 +25,6 @@
                     <a class="btn btn-success  btn-lg" role="button"  href="{{ url('/admin/gasto/gasto') }}"> 
                         <img src="{{asset('img/images.jpg')}}" width="100" /><br>
                         <span class="label label-default">Gastos </span></a>
- 
-    {{--Fin de Panel de Botones--}}
                 </div> 
         </div> 
 </div> 

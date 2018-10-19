@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,6 @@
 
         <!-- Styles -->
         <style>
-           
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -65,38 +65,36 @@
             }
         </style>
     </head>
+
     <body>
         <div class="flex-center position-ref full-height">
+            {{-- Boton de inicio para login  --}}
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}">Iniciar</a>
-                        {{-- <a href="{{ route('register') }}">Register</a> --}}
+                        <a href="{{ route('login') }}">Acceder</a>
+                        
                     @endauth
                 </div>
             @endif
 
             <div class="content">
+                {{-- Imagen de portada --}}
                 <div class="title m-b-md">
-                 
                     <img src="{{asset('img/images.png')}}" width="300" />
                 </div>
-
+                {{-- Botones de menu --}}
                 <div class="links">
                     <a href="{{ url('/producto') }}">Productos</a>
                     <a href="#">Contactos</a>
                     <a href="#">Información</a>
                     <a href="#">Blog</a>
-                    {{-- <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a> --}}
+                    
                 </div>
-            </div>
-        </div>
+             </div> {{-- fin de content --}}
+
+        </div> {{--  fin de flex-center --}}
     </body>
 </html>
