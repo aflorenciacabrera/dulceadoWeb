@@ -16,10 +16,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+// -------------Publico-------------------
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/producto/galeria','ProductoController@galeriaProducto');
+// -------------Privado-------------------
 Route::get('/producto','ProductoController@producto');
 Route::get('producto/agregar','ProductoController@agregarProducto');
-Route::post('producto/alta','ProductoController@altaProducto');
+Route::post('producto/agregar','ProductoController@altaProducto');
+
 // Route::get('/menu','HomeController@menu');

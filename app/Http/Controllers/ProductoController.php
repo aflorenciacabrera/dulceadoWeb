@@ -1,19 +1,28 @@
 <?php
 
 namespace dulceado\Http\Controllers;
-use Illuminate\Http\Request;
+
+use Illuminate\Http\Request
+;
 use dulceado\producto;
+
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+
 class ProductoController extends Controller
 {
     //
   public function galeriaProducto(){
-      return view('producto.galeriaProducto');
+    $productos = producto::all();
+      return view('producto.galeriaProducto', compact('productos'));
     }
   
      public function producto(){
       return view('producto.producto');
     }
     public function agregarProducto(){
+      
       return view('producto.agregarProducto');
     }
 
@@ -21,7 +30,7 @@ class ProductoController extends Controller
 
       $p = new producto; 
   
-      // $p->avatar= $request->avatar;     
+      $p->avatar= $request->avatar;     
       $p->titulo= $request->titulo;
       $p->tipo= $request->tipo;
       $p->tamano= $request->tamano;
@@ -34,7 +43,8 @@ class ProductoController extends Controller
       $p->save();
      
       return redirect(url('producto/agregar'));
-
-      // return view('producto.agregarProducto');
+  // return view('producto.agregarProducto');
     }
+
+    
 }

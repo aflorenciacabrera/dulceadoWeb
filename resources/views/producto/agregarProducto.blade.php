@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -8,20 +11,22 @@
                 <div class="card-header text-center"><h4>{{ __('Ingreso de Producto') }}</h4></div>
                 {{-- --------------------------------------------------------------------------------- --}}
                 <div class="card-body">
-                    <form method="POST" action="{{url('producto/alta')}}">
+                        <form method="POST" action="{{url('producto/agregar')}}">
                         @csrf
                         {{-- ------------------------- Cambiar imagen de producto ---------------------- --}}
                         <div class="col-md-3 col-lg-3 " align="center"> {{-- <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > --}}
+
                             <div class="col-lg-offset-2 " > 
                                 <img alt="User Pic" src="{{asset('img/images.png')}}" style="width:140px; height:120px; float:left; margin-right:70px;" id="profile-image1" > 
-                            </div>
-                            {{-- <form enctype="multipart/form-data" action="{{url('producto/alta')}}" method="POST">   
+                            </div> 
+                            {{-- <form enctype="multipart/form-data" action="{{url('producto/agregar')}}" method="POST">    --}}
                                 <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" ><br><br><br>
                                 <div   style="color:#999;" >haga clic aquí para cambiar la imagen del perfil</div>  
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" value="Cargar" class="pull btn btn-sm btn-default active">
                             </form>   --}}
                         </div>
+                        
                         {{-- -------------------------------------------------------------- --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Título</label>
@@ -99,6 +104,7 @@
                                 <a href="{{ url('/producto') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button"  class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
                                 </span>
                         </div>
+                         
                     </form>
                 </div>
             </div>
