@@ -87,7 +87,7 @@
                 </div>
                 {{-- Botones de menu --}}
                 <div class="links">
-                    <a href="{{ url('/producto') }}">Productos</a>
+                    <a href="{{ url('/producto/galeria') }}">Productos</a>
                     <a href="#">Contactos</a>
                     <a href="#">Información</a>
                     <a href="#">Blog</a>

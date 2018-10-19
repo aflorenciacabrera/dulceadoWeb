@@ -10,4 +10,8 @@ class ProductoController extends Controller
   public function galeriaProducto(){
       return view('producto.galeriaProducto');
     }
+  
+     public function producto(){
+      return view('producto.producto');
+    }
 }

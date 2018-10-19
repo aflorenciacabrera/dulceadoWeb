@@ -12,7 +12,7 @@
                     {{-- Productos--}}
                      <a class="btn btn-warning  btn-lg" role="button" href="{{ url('producto') }}">
                         <img src="{{asset('img/easter-egg-bunny-pattern-icon-68527.png')}}" width="100" /><br>
-                        <span class="label label-default">Pedido </span> </a>
+                        <span class="label label-default">Producto </span> </a>
                     {{-- Control Stock --}}       
                     <a class="btn btn-danger  btn-lg" role="button"  href="{{ url('stock') }}"> 
                         <img src="{{asset('img/Control-de-stock.png')}}" width="100" /><br>
