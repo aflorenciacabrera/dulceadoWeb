@@ -6,54 +6,42 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-center">Ingresar Producto</div>
-
+                <div class="card-header text-center"> <h3 >Productos</h3></div>
                 <div class="card-body">
-                   
-
-              
-<div class="col-md-12 col-md-offset-0" class="text-center" > 
- 
-       
-        <div class="gallery col-md-12  center">
-            <h1 class="gallery-title text-center">Productos</h1>
-            <br> 
-        </div>
-
-        <div align="center">
-            <a  type="button" href="{{url('producto/agregar')}}" class="btn btn-default btn-sl " > <i class="glyphicon glyphicon-plus"></i> Nuevo</a>
-             
-        	
-          </div>
-    <div class="row">
-    <div class="col-md-12 col-md-offset-0">    
-            <div class="panel-body">
-                  <div class="pull-left"><h3>Lista de Productos </h3></div>
-                  <div class="pull-right"> 
-                  </div>
-                  <div class="table-container">
-                    <table id="mytable" class="table table-bordred table-striped">
-                     <thead>
-                       <th>Muestra</th>
-                       <th>Paciente</th>
-                       <th>Depositante</th>               
-                       <th>Cesión</th>
-                     </thead>
-                     <tbody>             
-                      <tr>
-                        <td colspan="8">No hay  registrados !!</td>
-                      </tr>
+{{-- ********************************************************************************************************** --}}
+                        <div class="col-md-12 col-md-offset-0" class="text-center" >      
                             
-                    </tbody>
-                  </table>          
-                </div> 
-           </div>
-    </div>
-    </div>
-</div>
-
-
-      
+                            <div align="center">
+                                <a  type="button" href="{{url('producto/agregar')}}" class="btn btn-default btn-sl " > <i class="glyphicon glyphicon-plus"></i> Nuevo</a>
+                            </div>
+                        <div class="row">
+                        <div class="col-md-12 col-md-offset-0">    
+                                <div class="panel-body">
+                                    {{-- Titulo izquierda --}}
+                                    <div class="pull-left"><h3>Lista de Productos </h3></div>
+                                    {{-- Titulo derecha --}}
+                                    <div class="pull-right"> 
+                                    </div>
+                                    {{-- Tabla --}}
+                                    <div class="table-container">
+                                        <table id="mytable" class="table table-bordred table-striped">
+                                            <thead>
+                                                <th>Título</th>
+                                                <th>Paciente</th>
+                                                <th>Depositante</th>               
+                                                <th>Cesión</th>
+                                            </thead>
+                                            <tbody>             
+                                                <tr>
+                                                <td colspan="8">No hay  registrados !!</td>
+                                            </tbody>
+                                        </table>          
+                                    </div> 
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+{{-- ********************************************************************************************************** --}}
                 </div>
             </div>
         </div>
