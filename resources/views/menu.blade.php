@@ -4,7 +4,7 @@
 <div class="container">
         <div class="row justify-content-center">
                 <div class="links">
-   {{-- Panel de botones --}}
+   {{-- Panel de botones Menu--}}
                     {{-- Pedidos --}}
                     <a class="btn btn-info  btn-lg" role="button" href="{{ url('pedidos') }}">
                         <img src="{{asset('img/realiza_pedido.png')}}" width="100" /><br>
