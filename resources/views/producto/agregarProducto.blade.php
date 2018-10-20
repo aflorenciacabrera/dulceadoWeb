@@ -92,17 +92,35 @@
                         {{--******************************************************************************--}}
                          <div class="form-group row">
                                        
-                        </div>
-                        {{-- ******************************************** footer panel ***********************************************- --}}
-                        <div class="panel-footer">
+                         </di>
+                        {{-- ******************************** footer panel **************************************- --}}
+                        <div class="card-footer">
+                            <div class=" coupon col-md-8 col-sm-8 no-padding-left pull-left">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Aceptar') }}
-                                </button>
-                                <span class="pull-right">                        
+                                </button></div>
+                                <div class="pull-right">                        
                                 <a href="{{ url('/producto') }}" data-original-title="cancelar" data-toggle="tooltip" role ="button"  class="btn  btn-danger  ">Cancelar<i class="glyphicon glyphicon-share-alt"></i></a>
-                                </span>
+                                </div>
                         </div>
-                         
+                         {{-- <div class="card-footer">
+                <div class="coupon col-md-8 col-sm-8 no-padding-left pull-left">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="cupone code">
+                        </div>
+                        <div class="col-6">
+                            <input type="submit" class="btn btn-default" value="Use cupone">
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right" style="margin: 10px">
+                    <a href="" class="btn btn-success pull-right">Checkout</a>
+                    <div class="pull-right" style="margin: 5px">
+                        Total price: <b>50.00€</b>
+                    </div>
+                </div>
+            </div> --}}
                     </form>
                 </div>
             </div>

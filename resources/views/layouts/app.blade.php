@@ -13,12 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">   
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
 {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> --}}
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{{-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+
 
 <!------ Include the above in your HEAD tag ---------->
        <style>
@@ -71,10 +74,10 @@
                                             <!-- Authentication Links -->
                                             @guest
                                             {{-- Si no est logueado --}}
-                                                    <a class="btn btn-sm btn-default"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
+                                                    <a class="btn btn-default btn-sm pull-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
 
                                                     @if (Route::has('register'))
-                                                        <a class="btn btn-sm btn-default"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                                                        <a class="btn btn-default btn-sm pull-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                                     @endif
                                             @else
                                             {{-- si esta logueado --}}
