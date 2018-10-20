@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+               
                     @if(Auth::user()->hasRole('admin'))
                         <div>Acceso como administrador</div>
                     @else
@@ -21,7 +21,6 @@
                     @endif
                     Has iniciado sesión!
 
-                    
                 </div>
             </div>
         </div>

@@ -7,11 +7,11 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header text-center"><h4>{{ __('Ingreso de Producto') }}</h4></div>
-                {{-- --------------------------------------------------------------------------------- --}}
+                {{-- *************************************************************************************** --}}
                 <div class="card-body">
                         <form method="POST" action="{{url('producto/agregar')}}">
                         @csrf
-                        {{-- ------------------------- Cambiar imagen de producto ---------------------- --}}
+                        {{-- ************************ Cambiar imagen de producto************************--}}
                         <div class="col-md-3 col-lg-3 " align="center"> {{-- <img src="{{asset('img/descarga (3).jpg')}}" style="width:100px; height:100px; float:left; margin-right:30px;"  class="img-responsive" > --}}
 
                             <div class="col-lg-offset-2 " > 
@@ -25,7 +25,7 @@
                             </form>   --}}
                         </div>
                         
-                        {{-- -------------------------------------------------------------- --}}
+                        {{-- ******************************************************************************--}}
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Título</label>
                             <div class="col-md-4">
@@ -39,7 +39,7 @@
                                 </select> 
                             </div>
                         </div>
-                        {{-- -------------------------------------------------------------- --}}
+                        {{-- ****************************************************************************** --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Tamaño</label>
                             <div class="col-md-4">
@@ -59,7 +59,7 @@
                           </div>           
                             
                         </div>
-                        {{-- -------------------------------------------------------------- --}}
+                        {{-- ****************************************************************************** --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Medidas</label>
                             <div class="col-md-4">
@@ -75,7 +75,7 @@
                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Mixto">Mixto</label></li>                                      
                             </div>
                         </div>
-                       {{-- -------------------------------------------------------------- --}}
+                       {{-- ******************************************************************************--}}
                         <div class="form-group row">
                            <label for="comment" class="col-md-2 col-form-label "> Descripción</label>
                             <div class="col-md-5">
@@ -89,11 +89,11 @@
                              <input class="form-control"  type="number"  name="precio" min="0.00" max="10000.00" step="0.01" placeholder="$" required />
                           </div>     
                         </div>
-                        {{-- -------------------------------------------------------------- --}}
+                        {{--******************************************************************************--}}
                          <div class="form-group row">
                                        
                         </div>
-                        {{-- -----------------------footer panel--------------------------------------- --}}
+                        {{-- ******************************************** footer panel ***********************************************- --}}
                         <div class="panel-footer">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Aceptar') }}
@@ -109,7 +109,7 @@
         </div>
     </div>
 </div>
- {{-- --------------------------------------Script------------------------------------------------------------- --}}
+ {{-- *********************************** Script ***********************************- --}}
 <script>
     $(function() {
         $('#profile-image1').on('click', function() {
