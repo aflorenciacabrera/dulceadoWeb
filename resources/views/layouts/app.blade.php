@@ -73,22 +73,22 @@
                                     
                                 <div class=" col-lg-12 text-center">
                                     <div class="btn-group">
-                                        <span class="pull-right"> 
+                                        <span class="top-right"> 
                                             <!-- Authentication Links -->
                                             @guest
                                             {{-- Si no est logueado --}}
-                                                    <a class="btn btn-outline-success btn-sm pull-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
+                                                    <a class="btn btn-outline-success btn-sm top-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
 
                                                     @if (Route::has('register'))
-                                                        <a class="btn btn-outline-success btn-sm pull-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                                                        <a class="btn btn-outline-success btn-sm top-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                                     @endif
                                             @else
                                             {{-- si esta logueado --}}
                                              
-                                                        <a class="btn btn-outline-info btn-sm pull-right" href="{{url('/home')}}">  {{ Auth::user()->rol }}   {{ Auth::user()->name }} </a>
+                                                        <a class="btn btn-outline-info btn-sm top-right" href="{{url('/home')}}">  {{ Auth::user()->rol }}   {{ Auth::user()->name }} </a>
                                                         {{-- <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
                                                         <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a> --}}
-                                                        <a  class="btn btn-outline-danger btn-sm pull-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  <i class="fa fa-power-off"></i>
+                                                        <a  class="btn btn-outline-danger btn-sm top-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  <i class="fa fa-power-off"></i>
                                                         
                                                         </a>
                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

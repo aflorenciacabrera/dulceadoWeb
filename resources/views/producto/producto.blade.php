@@ -22,14 +22,15 @@
                         <div class="col-md-12 col-md-offset-0">    
                                 <div class="car-body">
                                     {{-- Titulo izquierda --}}
-                                    <div class="pull-left"><h3> </h3></div>
+                                    <div class="top-left"><h3> </h3></div>
                                     {{-- Titulo derecha --}}
-                                    <div class="pull-right"></div>
+                                    <div class="top-right"> </div>
 {{-- ***************************************Lista de productos***************************************************** --}}
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
         <h4>Lista de Productos</h4>
+        
         <div class="table-responsive">        
                <table id="mytable" class="table table-bordred table-striped">                 
                    <thead>              
