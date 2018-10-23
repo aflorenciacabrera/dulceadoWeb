@@ -16,14 +16,15 @@
                         <form method="POST" action="{{url('producto/agregar')}}">
                         @csrf
                         {{-- ************************ Cambiar imagen de producto************************--}}
-                        <div  class="form-group row"  >   
-                            <div class="col-md-2">        
-                              <img alt="User Pic" src="{{asset('img/images.png')}}" style="width:100px; height:80px; float:left; margin-right:70px;" id="profile-image1" > 
-                            </div> 
-                            <div class="col-md-2"> 
-                               <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >     
-                            </div> 
-
+                        <div class="col-lg-8 offset-lg-4">
+                            <div  class="form-group row"  >   
+                                <div class="col-md-3">        
+                                <img alt="User Pic" src="{{asset('img/images.png')}}" style="width:120px; height:100px; float:left; margin-right:70px;" id="profile-image1" > 
+                                </div> 
+                                <div class="col-md-2"> 
+                                <input id="profile-image-upload" value="Seleccionar imagen" name="avatar" class="hidden" type="file" accept="image/*" >     
+                                </div> 
+                            </div>
                         </div>
                         
                         {{-- ******************************************************************************--}}
@@ -34,7 +35,7 @@
                             </div>
                             <label for="name" class="col-md-2 col-form-label "> Tipo</label>
                             <div class="col-md-4">
-                                 <select name="tipo" id="">
+                                 <select name="tipo" id=""class="form-control">
                                     <option value="Figura"> Figura  </option>
                                     <option value="Huevo"> Huevo </option>
                                 </select> 
@@ -44,7 +45,7 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Tamaño</label>
                             <div class="col-md-4">
-                                <select name="tamano" id="">
+                                <select name="tamano" id="" class="form-control">
                                     <option value="Único">Único</option>
                                   <option value="Chico">Chico</option>
                                   <option value="Mediano">Mediano</option>
@@ -92,7 +93,7 @@
                         </div>
                         {{--******************************************************************************--}}
                          <div class="form-group row">
-                                     
+                            
                          </di>
                         {{-- ******************************** footer panel **************************************- --}}
                         
