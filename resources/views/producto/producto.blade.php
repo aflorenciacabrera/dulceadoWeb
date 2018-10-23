@@ -12,7 +12,8 @@
                         <div class="col-md-12 col-md-offset-0" class="text-center" >      
                             
                             <div align="center">
-                                <a  type="button" href="{{url('producto/agregar')}}" class="btn btn-default btn-sm " > <i class="fa fa-plus"></i> Nuevo</a>
+                                
+                                <a  rol="button" href="{{url('producto/agregar')}}" class="btn btn-outline-primary btn-sm " > <i class="fa fa-plus"></i> Nuevo</a>
                             </div>
                         <div class="row">
                         <div class="col-md-12 col-md-offset-0">    
