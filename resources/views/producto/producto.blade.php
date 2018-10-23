@@ -34,24 +34,32 @@
                <table id="mytable" class="table table-bordred table-striped">                 
                    <thead>              
                    <th>#</th>
-                   <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
-                    <th>Contact</th>
-                    <th>Edit</th>           
-                    <th>Delete</th>
+                    <th>Imagen</th>
+                    <th>Título</th>
+                    <th>Tipo</th>
+                    <th>Tamaño</th>
+                    <th>Peso</th>
+                    <th>Medidas</th>
+                    <th>Sabor</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Editar</th>           
+                    <th>Eliminar</th>
                     </thead>
                         <tbody> 
                         <tr>
-                        <td><input type="checkbox" class="checkthis" /></td>
-                        <td>Mohsin</td>
-                        <td>Irshad</td>
-                        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-                        <td>isometric.mohsin@gmail.com</td>
-                        <td>+923335586757</td>
-                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-edit"></i></button></p></td>
-                        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><i class="fa fa-trash"></i></button></p></td>
+                            <td><input type="checkbox" class="checkthis" /></td>
+                            <td><p data-placement="top" data-toggle="tooltip" title="Foto"><button class="btn btn-outline-success btn-xs" data-title="Foto" data-toggle="modal" data-target="#foto" ><i class="fa fa-image"></i></button></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-outline-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-edit"></i></button></p></td>
+                            <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-outline-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><i class="fa fa-trash"></i></button></p></td>
                         </tr>
                         </tbody>
                 </table>
@@ -65,22 +73,23 @@
    <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+           
             <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
+             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-times" aria-hidden="true"></span></button>
         </div>
         <div class="modal-body">
             <div class="form-group">
-                <input class="form-control " type="text" placeholder="Mohsin">
+                <input class="form-control " type="text" placeholder="">
             </div>
             <div class="form-group"> 
-                <input class="form-control " type="text" placeholder="Irshad">
+                <input class="form-control " type="text" placeholder="">
             </div>
             <div class="form-group">
-                <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
+                <textarea rows="2" class="form-control" placeholder=""></textarea>
             </div>
         </div>
         <div class="modal-footer ">
-            <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+            <button type="button" class="btn btn-info btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>Aceptar</button>
         </div>
     </div>
     <!-- /.modal-content --> 
@@ -88,28 +97,54 @@
       <!-- /.modal-dialog --> 
 </div>
 {{-- ***********************Modal de Delete********************************* --}}
-<div class="modal fade" id="deletne" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+           <h4 class="modal-title custom_align" id="Heading">Eliminar Producto</h4>
+             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-times" aria-hidden="true"></span></button>
         </div>
         <div class="modal-body">
-        <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div> 
+        <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Está seguro que desea Eliminar el producto?</div> 
         </div>
         <div class="modal-footer ">
-            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+            <button type="button" class="btn btn-success" ><span class="fa fa-ok-sign"></span> Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-remove"></span> No</button>
         </div>
     </div>
     <!-- /.modal-content --> 
   </div>
       <!-- /.modal-dialog --> 
-</div>     
-{{-- ********************************************************************************************************** --}}    
-                        {{-- Tabla --}}
-                    <div class="table-container">
+</div>
+{{-- ***********************Modal de Edit********************************* --}}
+<div class="modal fade" id="foto" tabindex="-1" role="dialog" aria-labelledby="foto" aria-hidden="true">
+   <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title custom_align" id="Heading">Imagen de Producto</h4>
+             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-times" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+            {{-- <div class="form-group">
+                <input class="form-control " type="text" placeholder="">
+            </div>
+            <div class="form-group"> 
+                <input class="form-control " type="text" placeholder="">
+            </div>
+            <div class="form-group">
+                <textarea rows="2" class="form-control" placeholder=""></textarea>
+            </div> --}}
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-info btn-lg" style="width: 100%;"><span class="fa fa-ok-sign"></span>Aceptar</button>
+        </div>
+    </div>
+    <!-- /.modal-content --> 
+   </div>
+      <!-- /.modal-dialog --> 
+</div>
+{{-- ***************************************Tabla*************************************************************** --}}   
+                    {{-- <div class="table-container">
                         <table id="mytable" class="table table-bordred table-striped">
                             <thead>
                                 <th></th>
@@ -122,7 +157,7 @@
                                 <td colspan="8">No hay  registrados !!</td>
                             </tbody>
                         </table>          
-                    </div> 
+                    </div>  --}}
 {{-- ********************************************************************************************************** --}}
                 </div>
             </div>
