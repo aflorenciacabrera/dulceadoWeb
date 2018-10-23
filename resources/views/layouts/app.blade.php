@@ -8,6 +8,8 @@
     <title>{{ config('app.name', 'Dulceado') }}</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/jquery.js') }}" ></script>
+    <script src="{{ asset('js/jquery.table2excel.min.js') }}" defer></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">   
@@ -18,12 +20,8 @@
 {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> --}}
-{{-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
-
-
 <!------ Include the above in your HEAD tag ---------->
+{{-- ********************************************* style ********************************************************** --}}
        <style>
         .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
         color: #ffffff;
@@ -39,9 +37,10 @@
         }   
     </style>
 </head>
+{{-- *********************************************  ********************************************************** --}}
 <body>
     <div id="app">
-        {{-- Navegador  --}}
+{{-- ******************************************* Navegador ******************************************************** --}}
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
             <div class="container">
                 {{-- Logo --}}
@@ -74,18 +73,18 @@
                                             <!-- Authentication Links -->
                                             @guest
                                             {{-- Si no est logueado --}}
-                                                    <a class="btn btn-default btn-sm pull-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
+                                                    <a class="btn btn-outline-success btn-sm pull-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
 
                                                     @if (Route::has('register'))
-                                                        <a class="btn btn-default btn-sm pull-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                                                        <a class="btn btn-outline-success btn-sm pull-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                                     @endif
                                             @else
                                             {{-- si esta logueado --}}
                                              
-                                                        <a class="btn btn-outline-info btn-sm pull-right">  {{ Auth::user()->rol }}   {{ Auth::user()->name }} </a>
+                                                        <a class="btn btn-outline-info btn-sm pull-right" href="{{url('/home')}}">  {{ Auth::user()->rol }}   {{ Auth::user()->name }} </a>
                                                         {{-- <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
                                                         <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a> --}}
-                                                        <a  class="btn btn-outline-info btn-sm pull-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  
+                                                        <a  class="btn btn-outline-danger btn-sm pull-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  
                                                         
                                                         </a>
                                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -108,17 +107,13 @@
     <div id="justpushtobottom">     
     </div>
 {{-- style="background: #2C3E50;" --}}
-{{-- footer --}}
-<footer class="footer p-t-1" >
-        <div class="container">
-            
 
-            <div class="copyright company-name text-center"> Florencia Cabrera © 2018</div>
-                         
-          
+{{-- ******************************************* Footer ******************************************************** --}}
+    <footer class="footer p-t-1" >
+        <div class="container">           
+            <div class="copyright company-name text-center"> Florencia Cabrera © 2018</div>  
         </div>
     </footer>
-
 
 </body>
 </html>
