@@ -36,6 +36,7 @@
                             <label for="name" class="col-md-2 col-form-label "> Tipo</label>
                             <div class="col-md-4">
                                  <select name="tipo" id=""class="form-control">
+                                     <option value="null">-</option>
                                     <option value="Figura"> Figura  </option>
                                     <option value="Huevo"> Huevo </option>
                                 </select> 
@@ -46,18 +47,19 @@
                             <label for="name" class="col-md-2 col-form-label "> Tamaño</label>
                             <div class="col-md-4">
                                 <select name="tamano" id="" class="form-control">
+                                    <option value="null">-</option>
                                     <option value="Único">Único</option>
-                                  <option value="Chico">Chico</option>
-                                  <option value="Mediano">Mediano</option>
-                                  <option value="Grande">Grande</option>
-                                  <option value="jumbo">jumbo</option>
+                                    <option value="Chico">Chico</option>
+                                    <option value="Mediano">Mediano</option>
+                                    <option value="Grande">Grande</option>
+                                    <option value="jumbo">jumbo</option>
                                 </select>                           
                             </div>  
                             <div class="col-md-2  label-column"> 
                                <label class="control-label" >Peso </label> 
                            </div> 
                              <div class="col-sm-2 input-column"> 
-                             <input class="form-control" type="number"  min="0.00" max="10000.00" name="peso" placeholder="N°"  />                         
+                             <input class="form-control" type="number"  min="0.000" max="10000.000" name="peso" placeholder="N°"  />                         
                           </div>           
                             
                         </div>
@@ -65,8 +67,8 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Medidas</label>
                             <div class="col-md-4">
-                                <li>Ancho: </li> <input class="form-control" type="number"  min="0.00" max="10000.00" name="medida" placeholder="N°"  />
-                              <li>Alto: </li> <input class="form-control" type="number"  min="0.00" max="10000.00" name="medida" placeholder="N°"  />
+                                <li>Ancho: </li> <input class="form-control" type="number"  min="0.000" max="10000.000" name="medida" placeholder="N°"  />
+                              <li>Alto: </li> <input class="form-control" type="number"  min="0.000" max="10000.000" name="medida" placeholder="N°"  />
                             </div>    
                             <div class="col-sm-2 label-column"> 
                               <label class="control-label" for="name-input-field" >Chocolate </label>
