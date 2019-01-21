@@ -46,12 +46,13 @@
     <div id="app">
 {{-- ******************************************* Navegador ******************************************************** --}}
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
-            <div class="container">
-                {{-- Logo --}}
-                <a class="navbar-brand " href="{{ url('/') }}"><img src="{{asset('img/images.png')}}" width="70" />
-                   <font face="  " size="5"> {{ config('app.name', 'Laravel') }}</font>
+             {{-- Logo --}}
+             <a class="navbar-brand " href="{{ url('/') }}"><img src="{{asset('img/images.png')}}" width="90" />
+                   <font face="  " size=""> {{ config('app.name', 'Laravel') }}</font>
                    <span> : </span> <font face="Britannic Bold" size="4"> <span>Dulce & Salado</span></font>
                 </a>
+            <div class="container">
+               
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{-- {{ config('app.name', 'Dulceado') }} --}}
                 </a>
