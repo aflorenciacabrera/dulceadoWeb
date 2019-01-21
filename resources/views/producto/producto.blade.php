@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <div class="container">
     <div class="row justify-content-center">
@@ -48,10 +46,16 @@
                     <th>Eliminar</th>
                     </thead>
                         <tbody> 
-                        <tr>
+                       <tr>
+                            @if($productos->count())
+                        @foreach ( $productos as $producto) 
+                        
                             <td><input type="checkbox" class="checkthis" /></td>
-                            <td><p data-placement="top" data-toggle="tooltip" title="Foto"><button class="btn btn-outline-success btn-xs" data-title="Foto" data-toggle="modal" data-target="#foto" ><i class="fa fa-image"></i></button></p></td>
-                            <td></td>
+                            <td>
+                            <img alt="User Pic" src="{{Storage::url($producto->avatar)}}" style="width:120px; height:100px; float:left; margin-right:70px;" id="profile-image1" >
+                            {{-- <p data-placement="top" data-toggle="tooltip" title="Foto"><a class="btn btn-outline-success btn-xs" data-title="Foto" data-toggle="modal" data-target="#foto" data-image="{{Storage::url($producto->avatar)}}"><i class="fa fa-image"></i></a></p>--}}
+                            </td>  
+                            <td>{{$producto->titulo}}</td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -61,9 +65,17 @@
                             <td></td>
                             <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-outline-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-edit"></i></button></p></td>
                             <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-outline-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><i class="fa fa-trash"></i></button></p></td>
-                        </tr>
+                        </tr> 
+                         @endforeach
+                            @else
+                                <tr>
+                                    <td colspan="8">No hay Productos registrados !!</td>
+                                </tr>
+                            @endif
+                
                         </tbody>
                 </table>
+                 
 {{-- ***********************Pagination********************************* --}}
             <div class="col-lg-3 offset-lg-4">
                 <nav >
@@ -78,7 +90,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>          
+              </div>   
         </div>
 	</div>
 </div>
@@ -136,6 +148,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <h4 class="modal-title custom_align" id="Heading">Imagen de Producto</h4>
+            
              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-times" aria-hidden="true"></span></button>
         </div>
         <div class="modal-body">
@@ -183,4 +196,5 @@
         </div>
     </div>
 </div>
+                     
 @endsection

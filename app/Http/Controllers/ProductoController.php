@@ -19,7 +19,8 @@ class ProductoController extends Controller
     }
   
      public function producto(){
-      return view('producto.producto');
+        $productos = producto::all();
+      return view('producto.producto', compact('productos'));
     }
     public function agregarProducto(){
       
@@ -30,7 +31,7 @@ class ProductoController extends Controller
 
       $p = new producto; 
   
-      $p->avatar= $request->avatar;     
+      $p->avatar= $request->file('avatar')->store('/public');     
       $p->titulo= $request->titulo;
       $p->tipo= $request->tipo;
       $p->tamano= $request->tamano;
@@ -42,7 +43,7 @@ class ProductoController extends Controller
 
       $p->save();
      
-      return redirect(url('producto/agregar'));
+      return redirect(url('producto'));
   // return view('producto.agregarProducto');
     }
 

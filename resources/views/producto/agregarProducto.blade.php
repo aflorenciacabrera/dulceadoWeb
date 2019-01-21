@@ -11,10 +11,14 @@
                       <h4>{{ __('Ingreso de Producto') }}</h4></div>
                 {{-- *************************************************************************************** --}}
                 <div class="card-body">
-                        <form method="POST" action="{{url('producto/agregar')}}">
+                        <form method="POST" action="{{url('producto/agregar')}}" enctype="multipart/form-data">
                         @csrf
                         {{-- ************************ Cambiar imagen de producto************************--}}
-                        <div class="col-lg-8 offset-lg-4">
+                        <div class="col-lg-8 offset-lg-2">
+                            {{-- <label for="avatar">
+                                <input type="file" name="avatar">
+                                <img src="{{asset('storage/7l4I1CCcAiMv4r5GCTDpVnaRBeTQ8edXxr4f0a94.png')}}" style="width:120px; height:100px; float:left; margin-right:70px;" alt="">
+                            </label> --}}
                             <div  class="form-group row"  >   
                                 <div class="col-md-3">        
                                 <img alt="User Pic" src="{{asset('img/images.png')}}" style="width:120px; height:100px; float:left; margin-right:70px;" id="profile-image1" > 
