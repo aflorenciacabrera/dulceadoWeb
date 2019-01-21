@@ -47,8 +47,8 @@
 {{-- ******************************************* Navegador ******************************************************** --}}
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel" >
              {{-- Logo --}}
-             <a class="navbar-brand " href="{{ url('/') }}"><img src="{{asset('img/images.png')}}" width="90" />
-                   <font face="  " size=""> {{ config('app.name', 'Laravel') }}</font>
+             <a class="navbar-brand " href="{{ url('/') }}"><img src="{{asset('img/images.png')}}" width="80px" />
+                   <font face="  " size="5"> {{ config('app.name', 'Laravel') }}</font>
                    <span> : </span> <font face="Britannic Bold" size="4"> <span>Dulce & Salado</span></font>
                 </a>
             <div class="container">
