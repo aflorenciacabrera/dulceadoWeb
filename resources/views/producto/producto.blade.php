@@ -9,7 +9,7 @@
                 <div class="card-header text-center"> <h3 >Productos</h3></div>
                 <div class="card-body">
 {{-- ********************************************************************************************************** --}}
-                        <div class="col-md-12 col-md-offset-0" class="text-center" >      
+                        <div class="col-md-13 col-md-offset-0" class="text-center" >      
                             
                             <div align="center">
                                 
@@ -29,7 +29,7 @@
         <div class="col-md-12">
         <h4>Lista de Productos</h4>
         
-        <div class="table-responsive">        
+        <div class="table-responsive text-center">        
                <table id="mytable" class="table table-bordred table-striped">                 
                    <thead>              
                    <th>#</th>
@@ -52,17 +52,17 @@
                         
                             <td><input type="checkbox" class="checkthis" /></td>
                             <td>
-                            <img alt="User Pic" src="{{Storage::url($producto->avatar)}}" style="width:120px; height:100px; float:left; margin-right:70px;" id="profile-image1" >
+                             <img alt="User Pic"  src="{{Storage::url($producto->avatar)}}" style="width:120px; height:100px; float:left; margin-right:70px;" id="profile-image1" >
                             {{-- <p data-placement="top" data-toggle="tooltip" title="Foto"><a class="btn btn-outline-success btn-xs" data-title="Foto" data-toggle="modal" data-target="#foto" data-image="{{Storage::url($producto->avatar)}}"><i class="fa fa-image"></i></a></p>--}}
                             </td>  
                             <td>{{$producto->titulo}}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$producto->tipo}}</td>
+                            <td>{{$producto->tamano}}</td>
+                            <td>{{$producto->peso}}</td>
+                            <td>{{$producto->medida}}</td>
+                            <td>{{$producto->sabor}}</td>
+                            <td>{{$producto->descripcion}}</td>
+                            <td>{{$producto->precio}}</td>
                             <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-outline-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-edit"></i></button></p></td>
                             <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-outline-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><i class="fa fa-trash"></i></button></p></td>
                         </tr> 

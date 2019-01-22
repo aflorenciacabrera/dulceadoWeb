@@ -59,48 +59,42 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">  
                                    
                     </ul>
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                         
-                    </ul>
-                            {{-- Navbar derecha --}}
-                            <ul class="navbar-nav ml-auto navbar-right ">
-                                <div class="row" > 
-                                    
-                                <div class=" col-lg-12 text-center">
-                                    <div class="btn-group">
-                                        <span class="top-right"> 
-                                            <!-- Authentication Links -->
-                                            @guest
-                                            {{-- Si no est logueado --}}
-                                                    <a class="btn btn-outline-success btn-sm top-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a>
 
-                                                    @if (Route::has('register'))
-                                                        <a class="btn btn-outline-success btn-sm top-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a>
-                                                    @endif
-                                            @else
-                                            {{-- si esta logueado --}}
-                                             
-                                                        <a class="btn btn-outline-info btn-sm top-right" href="{{url('/home')}}">  {{ Auth::user()->rol }}   {{ Auth::user()->name }} </a>
-                                                        {{-- <a  class="btn btn-sm btn-default"  role="button" href="{{url('/perfil') }}" >Perfil <i class="glyphicon glyphicon-user"></i></a>
-                                                        <a  class="btn btn-sm btn-default"    role="button" href="{{url('/principal') }}" >Principal <i class="glyphicon glyphicon-folder-open"></i></a> --}}
-                                                        <a  class="btn btn-outline-danger btn-sm top-right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Salir') }}  <i class="fa fa-power-off"></i>
-                                                        
-                                                        </a>
-                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                            @csrf
-                                                        </form>
-                                            @endguest
-                                        </span> 
-                                    </div>
-                                </div>
-                                </div>
-                            </ul>
+                            <!-- Authentication Links -->
+                                <ul class="navbar-nav ml-auto">
+                                    
+                            @guest
+                            {{-- Si no est logueado --}}
+                                    <li class="nav-item"><a class="btn btn-outline-success btn-sm top-right"  href="{{ route('login') }}">{{ __('Acceder') }}</a></li> 
+                                  
+                                    @if (Route::has('register'))
+                                        <li class="nav-item"><a class="btn btn-outline-success btn-sm top-right"   href="{{ route('register') }}">{{ __('Registrar') }}</a></li> 
+                                    @endif
+                            @else
+                            {{-- si esta logueado como admin--}}
+                                        <li class="nav-item"> <a  href="{{url('/')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-home"></i> Inicio</a> </li> 
+
+                                        <li class="nav-item"> <a  href="{{url('/perfil')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-user"></i> {{ Auth::user()->name }}</a> </li>
+
+                                        <li class="nav-item"> <a  href="{{url('/home')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-th-list"></i> Menú</a> </li>
+
+                                        <li class="nav-item"> <a   href="{{url('/producto/galeria')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-image"></i> Galeria</a> </li>
+
+                                        <li class="nav-item"><a   class=" btn btn-outline-danger btn-sm " href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">  <i class="fa fa-power-off"></i> {{ __('Salir') }}  
+                                        </a> </li>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+
+                            @endguest
+                                    </ul>     
+                               
                 </div>
             </div>
         </nav>
