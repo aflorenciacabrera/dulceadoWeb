@@ -33,11 +33,8 @@ class ProductoController extends Controller
   
       $p->avatar= $request->file('avatar')->store('/public');     
       $p->titulo= $request->titulo;
-      $p->tipo= $request->tipo;
-      $p->tamano= $request->tamano;
-      $p->peso= $request->peso;
-      $p->medida= $request->medida;
-      $p->sabor= $request->sabor;
+      $p->categoria= $request->categoria;
+      
       $p->descripcion= $request->descripcion;
       $p->precio= $request->precio;
 

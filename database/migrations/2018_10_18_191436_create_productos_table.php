@@ -17,11 +17,8 @@ class CreateProductosTable extends Migration
             $table->increments('id');
              $table->string('avatar')->default('images.png');
              $table->string('titulo');
-             $table->string('tipo');
-             $table->string('tamano');
-             $table->string('peso');
-             $table->string('medida');
-             $table->string('sabor');
+             $table->string('categoria');
+            
              $table->string('descripcion');
              $table->string('precio');
             $table->timestamps();

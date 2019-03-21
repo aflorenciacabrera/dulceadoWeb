@@ -35,11 +35,8 @@
                    <th>#</th>
                     <th>Imagen</th>
                     <th>Título</th>
-                    <th>Tipo</th>
-                    <th>Tamaño</th>
-                    <th>Peso</th>
-                    <th>Medidas</th>
-                    <th>Sabor</th>
+                    <th>Categoría</th>
+                    
                     <th>Descripción</th>
                     <th>Precio</th>
                     <th>Editar</th>           
@@ -56,11 +53,8 @@
                             {{-- <p data-placement="top" data-toggle="tooltip" title="Foto"><a class="btn btn-outline-success btn-xs" data-title="Foto" data-toggle="modal" data-target="#foto" data-image="{{Storage::url($producto->avatar)}}"><i class="fa fa-image"></i></a></p>--}}
                             </td>  
                             <td>{{$producto->titulo}}</td>
-                            <td>{{$producto->tipo}}</td>
-                            <td>{{$producto->tamano}}</td>
-                            <td>{{$producto->peso}}</td>
-                            <td>{{$producto->medida}}</td>
-                            <td>{{$producto->sabor}}</td>
+                            <td>{{$producto->categoria}}</td>
+                            
                             <td>{{$producto->descripcion}}</td>
                             <td>{{$producto->precio}}</td>
                             <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-outline-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><i class="fa fa-edit"></i></button></p></td>

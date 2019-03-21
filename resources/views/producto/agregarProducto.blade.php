@@ -35,17 +35,18 @@
                             <div class="col-md-4">
                                 <input id="name" type="text" class="form-control" name="titulo" value="" required autofocus>
                             </div>
-                            <label for="name" class="col-md-2 col-form-label "> Tipo</label>
+                            <label for="name" class="col-md-2 col-form-label "> Categoría</label>
                             <div class="col-md-4">
-                                 <select name="tipo" id=""class="form-control">
+                                 <select name="categoria" id=""class="form-control">
                                      <option value="null">-</option>
-                                    <option value="Figura"> Figura  </option>
-                                    <option value="Huevo"> Huevo </option>
+                                    <option value="Pascua"> Pascua  </option>
+                                    <option value="Cortante"> Cortante </option>
+                                     <option value="Reposteria"> Reposteria </option>
                                 </select> 
                             </div>
                         </div>
                         {{-- ****************************************************************************** --}}
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Tamaño</label>
                             <div class="col-md-4">
                                 <select name="tamano" id="" class="form-control">
@@ -64,9 +65,9 @@
                              <input class="form-control" type="number"  min="0.000" max="10000.000" name="peso" placeholder="N°"  />                         
                           </div>           
                             
-                        </div>
+                        </div> --}}
                         {{-- ****************************************************************************** --}}
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label "> Medidas</label>
                             <div class="col-md-4">
                                 <li>Ancho: </li> <input class="form-control" type="number"  min="0.000" max="10000.000" name="medida" placeholder="N°"  />
@@ -80,7 +81,7 @@
                                 <li><label class="radio-inline"><input type="radio" name="sabor" value="Blanco" >Blanco</label></li>
                                <li><label class="radio-inline"><input type="radio" name="sabor" value="Mixto">Mixto</label></li>                                      
                             </div>
-                        </div>
+                        </div> --}}
                        {{-- ******************************************************************************--}}
                         <div class="form-group row">
                            <label for="comment" class="col-md-2 col-form-label "> Descripción</label>

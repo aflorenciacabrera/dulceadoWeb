@@ -23,28 +23,50 @@
 </style>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
 {{-- ***************************************** Galeria de Imagen *********************************************** --}}
+{{-- Alta de tecnico --}}
 <div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+            <div class="card">   
+        <nav>
+					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pascua</a>
+						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Cortantes</a>
+						<a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Reposteria</a> 
+					</div>
+        </nav>
+                </div>
+ @if($productos->count())
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                 <div class="container">
 	<div class="row">
 		<div class="row">
-            {{-- Galeria de Imagen --}}
-             @if($productos->count())
+
+           
+            {{-- *************************Galeria de Imagen PASCUA **********************************--}}
+            
               @foreach ( $productos as $producto) 
+               @if($producto->categoria == 'Pascua')
             <div class="col-lg-3 col-md-4 col-xs-6 thumb"> 
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
                    data-image="{{Storage::url($producto->avatar)}}"
                    data-target="#image-gallery" >
                     <img class="img-thumbnail " 
                          src="{{Storage::url($producto->avatar)}}"
-                         style="width:220px; height:150px; margin-right:100px;" 
+                         style="width:400px; height:100px; margin-right:100px;" 
                          alt="Another alt text">
                 </a>
-                <h4>Titulo de Producto</h4>
-      			<p>descripcion breve. </p>
+                <h4>{{$producto->titulo}}</h4>
+                <p>{{$producto->categoria}}</p>
+      			<p>{{$producto->descripcion}} </p>
       			<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">
-      					<p class="price">$29,90</p>
+      					<p class="price">${{$producto->precio}}</p>
       				</div>
       				<div class="col-md-6 col-sm-6">
       					<button class="btn btn-info right" > Ver</button>
@@ -52,12 +74,110 @@
                   </div>
                   <br >
             </div> 
+           
+            @endif
     @endforeach
+                            </div>
+        </div>
+    </div>         
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                          
+                   <div class="container">
+	<div class="row">
+		<div class="row">
+
+           
+            {{-- **************************Galeria de Imagen CORTANTES***********************--}}
+            
+              @foreach ( $productos as $producto) 
+               @if($producto->categoria == 'Cortante')
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb"> 
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{Storage::url($producto->avatar)}}"
+                   data-target="#image-gallery" >
+                    <img class="img-thumbnail " 
+                         src="{{Storage::url($producto->avatar)}}"
+                         style="width:400px; height:100px; margin-right:100px;" 
+                         alt="Another alt text">
+                </a>
+                <h4>{{$producto->titulo}}</h4>
+                <p>{{$producto->categoria}}</p>
+      			<p>{{$producto->descripcion}} </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">${{$producto->precio}}</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > Ver</button>
+      				</div>    				
+                  </div>
+                  <br >
+            </div> 
+             
+            @endif
+    @endforeach
+                           
+  
+                            </div>
+        </div>
+    </div>       
+              </div>
+                <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                       
+            <div class="container">
+	<div class="row">
+		<div class="row">
+
+           
+            {{-- *******************************Galeria de Imagen REPOSTERIA*********************************--}}
+           
+              @foreach ( $productos as $producto) 
+               @if($producto->categoria == 'Reposteria')
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb"> 
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="{{Storage::url($producto->avatar)}}"
+                   data-target="#image-gallery" >
+                    <img class="img-thumbnail " 
+                         src="{{Storage::url($producto->avatar)}}"
+                         style="width:400px; height:100px; margin-right:100px;" 
+                         alt="Another alt text">
+                </a>
+                <h4>{{$producto->titulo}}</h4>
+                <p>{{$producto->categoria}}</p>
+      			<p>{{$producto->descripcion}} </p>
+      			<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      					<p class="price">${{$producto->precio}}</p>
+      				</div>
+      				<div class="col-md-6 col-sm-6">
+      					<button class="btn btn-info right" > Ver</button>
+      				</div>    				
+                  </div>
+                  <br >
+            </div> 
+            
+            @endif
+    @endforeach
+  
+                            </div>
+        </div>
+    </div>
+               
                             @else
                                 <tr>
                                     <td colspan="8">No hay Productos en Galeria !!</td>
                                 </tr>
-                            @endif
+                            @endif        
+					</div>
+				</div>
+                        
+
+
+
+
         {{-- Modal de las imagenes --}}
             <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
