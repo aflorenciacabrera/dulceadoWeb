@@ -24,4 +24,9 @@ Route::get('/producto','ProductoController@producto');
 Route::get('producto/agregar','ProductoController@agregarProducto');
 Route::post('producto/agregar','ProductoController@altaProducto');
 
+Route::get('usuario/perfil','UsuarioController@perfil');
+Route::get('usuario/perfil','UsuarioController@perfil');
+    Route::put('usuario/perfil','UsuarioController@editarPerfil');
+    Route::post('usuario/perfil', 'UsuarioController@update_avatar');
+    Route::delete('usuario/perfil','UsuarioController@eliminarPerfil')->name("eliminarPerfil");
 // Route::get('/menu','HomeController@menu');

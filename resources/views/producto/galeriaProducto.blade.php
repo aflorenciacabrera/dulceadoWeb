@@ -66,7 +66,7 @@
       			<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">
-      					<p class="price">${{$producto->precio}}</p>
+      					<p class="price"><h2>${{$producto->precio}}</h2></p>
       				</div>
       				<div class="col-md-6 col-sm-6">
       					<button class="btn btn-info right" > Ver</button>
@@ -107,7 +107,7 @@
       			<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">
-      					<p class="price">${{$producto->precio}}</p>
+      					<p class="price"><h2>${{$producto->precio}}</h2></p>
       				</div>
       				<div class="col-md-6 col-sm-6">
       					<button class="btn btn-info right" > Ver</button>
@@ -150,7 +150,7 @@
       			<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">
-      					<p class="price">${{$producto->precio}}</p>
+      					<p class="price"><h2>${{$producto->precio}}</h2></p>
       				</div>
       				<div class="col-md-6 col-sm-6">
       					<button class="btn btn-info right" > Ver</button>

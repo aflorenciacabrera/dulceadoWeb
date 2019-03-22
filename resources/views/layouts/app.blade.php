@@ -80,7 +80,7 @@
                             {{-- si esta logueado como admin--}}
                                         <li class="nav-item"> <a  href="{{url('/')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-home"></i> Inicio</a> </li> 
 
-                                        <li class="nav-item"> <a  href="{{url('/perfil')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-user"></i> {{ Auth::user()->name }}</a> </li>
+                                        <li class="nav-item"> <a  href="{{url('/usuario/perfil')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-user"></i> {{ Auth::user()->name }}</a> </li>
 
                                         <li class="nav-item"> <a  href="{{url('/home')}}" class=" btn btn-outline-info btn-sm "  role ="button" ><i class="fa fa-th-list"></i> Menú</a> </li>
 

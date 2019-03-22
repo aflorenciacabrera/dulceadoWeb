@@ -47,7 +47,6 @@ class HomeController extends Controller
     }
     */
 
-    
     public function menu(){
         if(Auth::user()->hasRole('admin')){
           return view('admin.menu');
