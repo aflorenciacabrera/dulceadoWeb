@@ -57,7 +57,7 @@
                    data-target="#image-gallery" >
                     <img class="img-thumbnail " 
                          src="{{Storage::url($producto->avatar)}}"
-                         style="width:400px; height:100px; margin-right:100px;" 
+                         style=" margin-right:100px;" 
                          alt="Another alt text">
                 </a>
                 <h4>{{$producto->titulo}}</h4>
